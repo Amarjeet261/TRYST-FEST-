@@ -106,11 +106,15 @@ export default function Event() {
       </p>
 
       {/* Days */}
-      <div className="text-white flex justify-between px-4 py-5 items-center bg-[#34005c] h-[40px] w-[79%] rounded-lg">
+      <div className="text-white flex justify-between px-4 py-5 items-center bg-[#34005c] h-[50px] w-[73%] rounded-lg">
         {Datas.days.map((day, index) => (
           <button
             key={index}
-            className="border border-transparent py-1 rounded-lg bg-yellow-500 max-sm:px-5 md:px-20 lg:px-30"
+            className={`border border-transparent py-1 rounded-lg max-sm:px-5 md:px-20 lg:px-30 ${
+              showEvent === index + 1
+                ? "bg-yellow-500 text-black"
+                : "bg-transparent"
+            }`}
             onClick={() => updateEvent(index + 1)}
           >
             {day}
@@ -121,10 +125,14 @@ export default function Event() {
       {/* Event Cards */}
       {showEvent === 1 ? (
         <div className="flex items-center justify-center gap-10 pt-[70px] flex-wrap">
-          {events.day1.map((event, index) => {
+          {events.day1.map((event) => {
             return (
-              <div key={index} className="min-h-[150px] w-[350px] rounded-lg text-white bg-[#34005c] justify-center flex pl-3 flex-col pb-4 text-left">
-                <h2 className="text-[23px] mt-2 text-yellow-500">{event.title}</h2>
+              <div
+                className="min-h-[150px] w-[350px] rounded-lg text-white bg-[#34005c] justify-center flex pl-3 flex-col pb-4 text-left"
+              >
+                <h2 className="text-[23px] mt-2 text-yellow-500">
+                  {event.title}
+                </h2>
                 <div className="flex items-center gap-2 mt-2">
                   <i className={event.icon1}></i>
                   <p>{event.time}</p>
@@ -142,10 +150,14 @@ export default function Event() {
 
       {showEvent === 2 ? (
         <div className="flex items-center justify-center gap-10 pt-[70px] flex-wrap">
-          {events.day2.map((event, index) => {
+          {events.day2.map((event) => {
             return (
-              <div key={index} className="min-h-[150px] w-[350px] rounded-lg text-white bg-[#34005c] justify-center flex pl-3 flex-col pb-4 text-left">
-                <h2 className="text-[23px] mt-2 text-yellow-500">{event.title}</h2>
+              <div
+                className="min-h-[150px] w-[350px] rounded-lg text-white bg-[#34005c] justify-center flex pl-3 flex-col pb-4 text-left"
+              >
+                <h2 className="text-[23px] mt-2 text-yellow-500">
+                  {event.title}
+                </h2>
                 <div className="flex items-center gap-2 mt-2">
                   <i className={event.icon1}></i>
                   <p>{event.time}</p>
@@ -160,12 +172,17 @@ export default function Event() {
           })}
         </div>
       ) : null}
-       {showEvent === 3 ? (
+
+      {showEvent === 3 ? (
         <div className="flex items-center justify-center gap-10 pt-[70px] flex-wrap">
-          {events.day3.map((event, index) => {
+          {events.day3.map((event) => {
             return (
-              <div key={index} className="min-h-[150px] w-[350px] rounded-lg text-white bg-[#34005c] justify-center flex pl-3 flex-col pb-4 text-left">
-                <h2 className="text-[23px] mt-2 text-yellow-500">{event.title}</h2>
+              <div
+                className="min-h-[150px] w-[350px] rounded-lg text-white bg-[#34005c] justify-center flex pl-3 flex-col pb-4 text-left"
+              >
+                <h2 className="text-[23px] mt-2 text-yellow-500">
+                  {event.title}
+                </h2>
                 <div className="flex items-center gap-2 mt-2">
                   <i className={event.icon1}></i>
                   <p>{event.time}</p>
