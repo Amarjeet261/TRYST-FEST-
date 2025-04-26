@@ -29,8 +29,8 @@ export default function Footer() {
           </h1>
           <p className="text-white ">{Datas.about.description}</p>
           <ul className="space-x-4 mt-4">
-            {Datas.about.icons.map((icon) => (
-              <a href="">
+            {Datas.about.icons.map((icon, idx) => (
+              <a href="" key={"icon" + idx}>
                 <i className={icon}></i>
               </a>
             ))}
@@ -40,13 +40,16 @@ export default function Footer() {
         <div className="flex flex-col w-[300px] px-[10px]">
           <h1 className="text-yellow-500 text-xl font-bold">Quick link</h1>
           <ul className="flex flex-col text-white text-xl">
-            {Datas.links.map((link) => (
-              <li>
-                <a href="#" className="hover:text-yellow-500">
+            {Datas.links.map((link, idx) => (
+              <li key={"icon" + idx}>
+                <a
+                  href="#"
+                  className="hover:text-yellow-500"
+                >
                   {link}
                 </a>
               </li>
-            ))} 
+            ))}
           </ul>
         </div>
 
@@ -76,8 +79,9 @@ export default function Footer() {
         </div>
       </div>
       <hr className="w-[90%] mx-auto opacity-50 mt-4" />
-      <h1 className="text-white text-center mt-[12px] text-xl">Du Fest 2025 Copyright © . All rights reserved.</h1>
-
+      <h1 className="text-white text-center mt-[12px] text-xl">
+        Du Fest 2025 Copyright © . All rights reserved.
+      </h1>
     </footer>
   );
 }

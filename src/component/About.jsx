@@ -17,7 +17,8 @@ export default function About() {
       {
         icons: "fa-solid fa-music text-yellow-500 text-lg",
         title: "Event Highlights",
-        description: "Live Performance, Dance Competition, Hackathon, Food Festival",
+        description:
+          "Live Performance, Dance Competition, Hackathon, Food Festival",
       },
     ],
   };
@@ -45,12 +46,14 @@ export default function About() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10 w-full max-w-6xl">
           {Datas.cards.map((data) => (
             <div
-            
+              key={data.title}
               className="h-[150px] flex flex-col items-center justify-center rounded-lg bg-[#34005c] text-white text-center hover:shadow-[0_8px_15px_rgba(255,0,0,0.6)] transition duration-300 p-4"
             >
               <i className={data.icons}></i>
               <h2 className="text-lg sm:text-xl mt-2"> {data.title}</h2>
-              <p className="text-sm sm:text-base mt-1 px-2">{data.description}</p>
+              <p className="text-sm sm:text-base mt-1 px-2">
+                {data.description}
+              </p>
             </div>
           ))}
         </div>

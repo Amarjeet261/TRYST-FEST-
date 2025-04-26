@@ -128,6 +128,7 @@ export default function Event() {
           {events.day1.map((event) => {
             return (
               <div
+                key={event.title}
                 className="min-h-[150px] w-[350px] rounded-lg text-white bg-[#34005c] justify-center flex pl-3 flex-col pb-4 text-left"
               >
                 <h2 className="text-[23px] mt-2 text-yellow-500">
@@ -152,9 +153,7 @@ export default function Event() {
         <div className="flex items-center justify-center gap-10 pt-[70px] flex-wrap">
           {events.day2.map((event) => {
             return (
-              <div
-                className="min-h-[150px] w-[350px] rounded-lg text-white bg-[#34005c] justify-center flex pl-3 flex-col pb-4 text-left"
-              >
+              <div className="min-h-[150px] w-[350px] rounded-lg text-white bg-[#34005c] justify-center flex pl-3 flex-col pb-4 text-left">
                 <h2 className="text-[23px] mt-2 text-yellow-500">
                   {event.title}
                 </h2>
@@ -177,9 +176,7 @@ export default function Event() {
         <div className="flex items-center justify-center gap-10 pt-[70px] flex-wrap">
           {events.day3.map((event) => {
             return (
-              <div
-                className="min-h-[150px] w-[350px] rounded-lg text-white bg-[#34005c] justify-center flex pl-3 flex-col pb-4 text-left"
-              >
+              <div className="min-h-[150px] w-[350px] rounded-lg text-white bg-[#34005c] justify-center flex pl-3 flex-col pb-4 text-left">
                 <h2 className="text-[23px] mt-2 text-yellow-500">
                   {event.title}
                 </h2>

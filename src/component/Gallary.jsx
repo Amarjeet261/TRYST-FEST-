@@ -128,6 +128,7 @@ export default function Gallery() {
           {Concert.gallery1.map((picks) => {
             return (
               <img
+                key={picks.img}
                 src={picks.img}
                 alt="Concert"
                 className="h-[250px] w-[90%] sm:w-[400px] rounded-lg cursor-pointer hover:scale-105 transition duration-300"
@@ -141,6 +142,7 @@ export default function Gallery() {
           {Concert.gallery2.map((picks) => {
             return (
               <img
+                key={picks.img}
                 src={picks.img}
                 alt="Concert"
                 className="h-[250px] w-[90%] sm:w-[400px] rounded-lg cursor-pointer hover:scale-105 transition duration-300"
@@ -155,6 +157,7 @@ export default function Gallery() {
           {Concert.gallery3.map((picks) => {
             return (
               <img
+                key={picks.img}
                 src={picks.img}
                 alt="Concert"
                 className="h-[250px] w-[90%] sm:w-[400px] rounded-lg cursor-pointer hover:scale-105 transition duration-300"

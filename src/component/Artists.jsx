@@ -53,7 +53,9 @@ export default function Artists() {
       <section className="h-auto w-full bg-[#1a0033]  flex flex-col text-white items-center justify-center">
         {/* heading */}
         <div className="flex items-center justify-center pt-15 sm:text-2xl">
-          <h1 className="text-4xl flex items-center text-white gap-2 pt-10 sm:text-4xl "> Featured
+          <h1 className="text-4xl flex items-center text-white gap-2 pt-10 sm:text-4xl ">
+            {" "}
+            Featured
             <span className="text-yellow-500 font-bold">Artists</span>
           </h1>
         </div>
@@ -65,6 +67,7 @@ export default function Artists() {
         <div className="relative w-full flex flex-wrap justify-center items-center gap-[40px]  max-sm:gap-4 mb-20">
           {Datas.artists.map((artist, index) => (
             <div
+              key={artist.name}
               className="h-[250px] w-[370px] border-2 border-pink-400 rounded-lg overflow-hidden flex flex-col bg-cover bg-center transform transition-transform duration-300 hover:scale-105 cursor-pointer "
               style={{ backgroundImage: `url(${artist.img})` }}
               onClick={() => {
